@@ -41,6 +41,18 @@ Next section.
 
 ###The Discovery Phase
 20150907 1943CST
-we're modding `ConnectionsViewController` to make it conform to the *MCBrowserViewControllerDelegate* protocol. 
+we're modding `ConnectionsViewController.h` to make it conform to the *MCBrowserViewControllerDelegate* protocol. 
+
+20150907 1946CST
+now adding app delegate to `ConnectionsViewController.m` `viewDidLoad` function.
+
+Instantiate the `appDelegate` using the `sharedApplication` class method, allowing us to call required public methods of `mcManager` object. Call `setupPeerAndSessionWithDisplayName` and `advertiseSelf`. Hand a default display name to setup in case they didn't specify.
+
+Adding code to `browseForDevices:IBAction` method in `ConnectionsViewController.m`. 
+
+Claims that we should be able to see the stuff work. I've got a black screen. 20150907 1952CST begin troubleshooting.
+
+20150907 2006CST problem was extra code from other answer which manually set up button names. Changing procedure in tab bar tutorial.
+
 
 

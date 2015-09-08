@@ -7,8 +7,11 @@
 //
 
 #import "ConnectionsViewController.h"
+#import "AppDelegate.h"
 
 @interface ConnectionsViewController ()
+
+@property (strong, nonatomic) AppDelegate *appDelegate;
 
 @end
 
@@ -25,8 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blueColor];
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
+    [[_appDelegate mcManager] advertiseSelf:_swVisible.isOn];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)browseForDevices:(id)sender {
+    [[_appDelegate mcManager] setupMCBrowser];
+    [[[_appDelegate mcManager] browser] setDelegate:self];
+    [self presentViewController:[[_appDelegate mcManager] browser] animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

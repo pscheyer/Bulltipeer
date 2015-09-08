@@ -23,21 +23,21 @@
     
     _mcManager = [[MCManager alloc] init];
     
-    ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
-    FileSharingViewController *fileSharingViewController = [[FileSharingViewController alloc] init];
-    ConnectionsViewController *connectionsViewController = [[ConnectionsViewController alloc] init];
-    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
-    tabBarVC.viewControllers = @[chatBoxViewController, fileSharingViewController, connectionsViewController];
+//    ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
+//    FileSharingViewController *fileSharingViewController = [[FileSharingViewController alloc] init];
+//    ConnectionsViewController *connectionsViewController = [[ConnectionsViewController alloc] init];
+//    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+//    tabBarVC.viewControllers = @[chatBoxViewController, fileSharingViewController, connectionsViewController];
     
-    [[tabBarVC.tabBar.items objectAtIndex:0] setTitle:NSLocalizedString(@"Chat Box", @"comment")];
-    
-    [[tabBarVC.tabBar.items objectAtIndex:1] setTitle:NSLocalizedString(@"File Sharing", @"comment")];
-    
-    [[tabBarVC.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Connections", @"comment")];
-
-    
-    self.window.rootViewController = tabBarVC;
-    [self.window makeKeyAndVisible];
+//    [[tabBarVC.tabBar.items objectAtIndex:0] setTitle:NSLocalizedString(@"Chat Box", @"comment")];
+//    
+//    [[tabBarVC.tabBar.items objectAtIndex:1] setTitle:NSLocalizedString(@"File Sharing", @"comment")];
+//    
+//    [[tabBarVC.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Connections", @"comment")];
+//
+//    
+//    self.window.rootViewController = tabBarVC;
+//    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

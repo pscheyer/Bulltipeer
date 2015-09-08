@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ConnectionsViewController.h
 //  Bulltipeer
 //
 //  Created by Peter Scheyer on 9/7/15.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface ConnectionsViewController : UIViewController
 
 @end
-

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3A57C761B9CA37F00644052"
+               BlueprintIdentifier = "D3A57CB11B9E53DD00644052"
                BuildableName = "Bulltipeer.app"
                BlueprintName = "Bulltipeer"
                ReferencedContainer = "container:Bulltipeer.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3A57C8F1B9CA37F00644052"
+               BlueprintIdentifier = "D3A57CCA1B9E53DD00644052"
                BuildableName = "BulltipeerTests.xctest"
                BlueprintName = "BulltipeerTests"
                ReferencedContainer = "container:Bulltipeer.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3A57C8F1B9CA37F00644052"
+               BlueprintIdentifier = "D3A57CCA1B9E53DD00644052"
                BuildableName = "BulltipeerTests.xctest"
                BlueprintName = "BulltipeerTests"
                ReferencedContainer = "container:Bulltipeer.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3A57C761B9CA37F00644052"
+            BlueprintIdentifier = "D3A57CB11B9E53DD00644052"
             BuildableName = "Bulltipeer.app"
             BlueprintName = "Bulltipeer"
             ReferencedContainer = "container:Bulltipeer.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3A57C761B9CA37F00644052"
+            BlueprintIdentifier = "D3A57CB11B9E53DD00644052"
             BuildableName = "Bulltipeer.app"
             BlueprintName = "Bulltipeer"
             ReferencedContainer = "container:Bulltipeer.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D3A57C761B9CA37F00644052"
+            BlueprintIdentifier = "D3A57CB11B9E53DD00644052"
             BuildableName = "Bulltipeer.app"
             BlueprintName = "Bulltipeer"
             ReferencedContainer = "container:Bulltipeer.xcodeproj">

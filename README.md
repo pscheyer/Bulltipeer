@@ -5,3 +5,12 @@ Bulltipeer is a project to build a multipeer connectivity chat client with a bui
 
 
 Our programming pattern will be from [AppCoda](http://www.appcoda.com/intro-multipeer-connectivity-framework-ios-programming/).
+
+20150907 1704CST
+That site suggests a tabbed app with 3 tabs. From the last one on the right, titled __My Connections__, we see a table view listing our connections. 
+
+
+20150907 1848CST
+Added 3-tab views. Used steps from [this tutorial saved in templates](How to Create a Tabbed App.md).
+
+

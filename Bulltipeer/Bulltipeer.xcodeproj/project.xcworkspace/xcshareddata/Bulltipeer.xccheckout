@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C4484CA5-D78F-4CAE-A89D-8154610E4FD6</string>
+	<string>396684A7-AEAB-4A42-AE9B-53868617B1B6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Bulltipeer</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BD39138D9D6C82BCF1AD991B558DDF7DEFAFD0BA</key>
 		<string>https://github.com/pscheyer/Bulltipeer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Bulltipeer/Bulltipeer.xcodeproj</string>
+	<string>Bulltipeer/Bulltipeer.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BD39138D9D6C82BCF1AD991B558DDF7DEFAFD0BA</key>

@@ -2,11 +2,15 @@
 //  AppDelegate.m
 //  Bulltipeer
 //
-//  Created by Peter Scheyer on 9/6/15.
+//  Created by Peter Scheyer on 9/7/15.
 //  Copyright (c) 2015 Peter Scheyer. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ChatBoxViewController.h"
+#import "FileSharingViewController.h"
+#import "ConnectionsViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,6 +20,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
+    FileSharingViewController *fileSharingViewController = [[FileSharingViewController alloc] init];
+    ConnectionsViewController *connectionsViewController = [[ConnectionsViewController alloc] init];
+    UITabBarController *tabBarVC = [[UITabBarController alloc] init];
+    tabBarVC.viewControllers = @[chatBoxViewController, fileSharingViewController, connectionsViewController];
+    
+    [[tabBarVC.tabBar.items objectAtIndex:0] setTitle:NSLocalizedString(@"Chat Box", @"comment")];
+    
+    [[tabBarVC.tabBar.items objectAtIndex:1] setTitle:NSLocalizedString(@"File Sharing", @"comment")];
+    
+    [[tabBarVC.tabBar.items objectAtIndex:2] setTitle:NSLocalizedString(@"Connections", @"comment")];
+
+    
+    self.window.rootViewController = tabBarVC;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

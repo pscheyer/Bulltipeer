@@ -16,6 +16,7 @@ Added 3-tab views. Used steps from [this tutorial saved in templates](How to Cre
 
 ###__'Connections View Controller: Setup the Interface'__
 20150907 1905CST
+added interface builder, IBOactions, and similar, according to tutorial. This is the first tutorial i've found that actually makes that simple.
 
 
 

@@ -54,5 +54,11 @@ Claims that we should be able to see the stuff work. I've got a black screen. 20
 
 20150907 2006CST problem was extra code from other answer which manually set up button names. Changing procedure in tab bar tutorial.
 
+20150907 2012CST 
+implementing functions for Done and Cancel buttons via delegate methods of `MCBrowserViewControllerDelegate`. Added them to `ConnectionsViewController.m`. 
+
+
+###Peer Display Name And The Advertiser State
+
 
 

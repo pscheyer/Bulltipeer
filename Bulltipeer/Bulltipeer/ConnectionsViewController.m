@@ -45,6 +45,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController{
+    [_appDelegate.mcManager.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

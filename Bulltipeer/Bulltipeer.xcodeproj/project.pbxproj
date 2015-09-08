@@ -16,6 +16,7 @@
 		D3A57CD21B9E53DD00644052 /* BulltipeerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CD11B9E53DD00644052 /* BulltipeerTests.m */; };
 		D3A57CDD1B9E54A300644052 /* FileSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CDC1B9E54A300644052 /* FileSharingViewController.m */; };
 		D3A57CE01B9E54B100644052 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CDF1B9E54B100644052 /* ConnectionsViewController.m */; };
+		D3A57CE31B9E626100644052 /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CE21B9E626100644052 /* MCManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		D3A57CDC1B9E54A300644052 /* FileSharingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSharingViewController.m; sourceTree = "<group>"; };
 		D3A57CDE1B9E54B100644052 /* ConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsViewController.h; sourceTree = "<group>"; };
 		D3A57CDF1B9E54B100644052 /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
+		D3A57CE11B9E626100644052 /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
+		D3A57CE21B9E626100644052 /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				D3A57CDC1B9E54A300644052 /* FileSharingViewController.m */,
 				D3A57CDE1B9E54B100644052 /* ConnectionsViewController.h */,
 				D3A57CDF1B9E54B100644052 /* ConnectionsViewController.m */,
+				D3A57CE11B9E626100644052 /* MCManager.h */,
+				D3A57CE21B9E626100644052 /* MCManager.m */,
 				D3A57CBF1B9E53DD00644052 /* Main.storyboard */,
 				D3A57CC21B9E53DD00644052 /* Images.xcassets */,
 				D3A57CC41B9E53DD00644052 /* LaunchScreen.xib */,
@@ -230,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A57CE01B9E54B100644052 /* ConnectionsViewController.m in Sources */,
+				D3A57CE31B9E626100644052 /* MCManager.m in Sources */,
 				D3A57CBE1B9E53DD00644052 /* ChatBoxViewController.m in Sources */,
 				D3A57CDD1B9E54A300644052 /* FileSharingViewController.m in Sources */,
 				D3A57CBB1B9E53DD00644052 /* AppDelegate.m in Sources */,

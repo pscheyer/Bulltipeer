@@ -21,6 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    _mcManager = [[MCManager alloc] init];
+    
     ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
     FileSharingViewController *fileSharingViewController = [[FileSharingViewController alloc] init];
     ConnectionsViewController *connectionsViewController = [[ConnectionsViewController alloc] init];

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface ConnectionsViewController : UIViewController
+@interface ConnectionsViewController : UIViewController <MCBrowserViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UISwitch *swVisible;
 @property (weak, nonatomic) IBOutlet UITableView *tblConnectedDevices;

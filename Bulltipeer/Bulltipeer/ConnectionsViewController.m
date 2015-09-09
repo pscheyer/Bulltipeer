@@ -31,6 +31,8 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
     [[_appDelegate mcManager] advertiseSelf:_swVisible.isOn];
+    
+    [_txtName setDelegate:self];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

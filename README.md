@@ -59,6 +59,9 @@ implementing functions for Done and Cancel buttons via delegate methods of `MCBr
 
 
 ###Peer Display Name And The Advertiser State
+20150908 2307CST
+Add text field delegate to `ConnectionsViewController.h` alongside the MCBrowserViewControllerDelegate. 
+Add the set command for that delegate to `ConnectionsViewController.m` `viewDidLoad` method.
 
 
 

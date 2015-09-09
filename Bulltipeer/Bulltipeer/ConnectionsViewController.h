@@ -10,7 +10,7 @@
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 #import "AppDelegate.h"
 
-@interface ConnectionsViewController : UIViewController <MCBrowserViewControllerDelegate>
+@interface ConnectionsViewController : UIViewController <MCBrowserViewControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtName;
 @property (weak, nonatomic) IBOutlet UISwitch *swVisible;
 @property (weak, nonatomic) IBOutlet UITableView *tblConnectedDevices;

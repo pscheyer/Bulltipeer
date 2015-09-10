@@ -63,5 +63,8 @@ implementing functions for Done and Cancel buttons via delegate methods of `MCBr
 Add text field delegate to `ConnectionsViewController.h` alongside the MCBrowserViewControllerDelegate. 
 Add the set command for that delegate to `ConnectionsViewController.m` `viewDidLoad` method.
 
+20150909 2241CST
+add `textFieldShouldReturn` delegate method of text field to remove keyboard when return button is tapped, and peerID to get the name set to the text field. We already initialized `peerID` and `session` so we need to set them to nil and then reinitialize using specified name by calling `setupPeerAndSessionWithDisplayName`.
+
 
 

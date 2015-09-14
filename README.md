@@ -107,4 +107,4 @@ Whole bunch of stuff, under the pragma mark for the table view delegate and data
 Had a brief bug from misplaced code in peerDidChangeState. Resolved it.
 
 20150913 2230CST
-add `disconnect` method.
+add `disconnect` method. Doesn't quite work properly across both devices… takes a little bit, i guess. A feature. 

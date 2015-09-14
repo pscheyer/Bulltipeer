@@ -62,6 +62,10 @@
     [self presentViewController:[[_appDelegate mcManager] browser] animated:YES completion:nil];
 }
 
+- (IBAction)toggleVisibility:(id)sender {
+    [_appDelegate.mcManager advertiseSelf:_swVisible.isOn];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

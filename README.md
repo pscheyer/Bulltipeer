@@ -66,5 +66,17 @@ Add the set command for that delegate to `ConnectionsViewController.m` `viewDidL
 20150909 2241CST
 add `textFieldShouldReturn` delegate method of text field to remove keyboard when return button is tapped, and peerID to get the name set to the text field. We already initialized `peerID` and `session` so we need to set them to nil and then reinitialize using specified name by calling `setupPeerAndSessionWithDisplayName`.
 
+20150913 2159CST
+The `textFieldShouldReturn` function checks if the advertiser is on- if so, stop it, and then set the respective object to nil. 
+
+The text field is kept disabled to stop from changing the name while a connection is in progress and disrupting any data exchange.
+
+Added another `IBAction`  function, `toggleVisibility`. Just calls `advertiseSelf` method to set the dvertiser's state according to the switch's state.
+
+Claims we can test the thing. Lets give it a whirl. 
+
+Wow! Worked fine. Best commit that. 20150913 2205CST
+
+
 
 

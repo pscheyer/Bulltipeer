@@ -78,5 +78,28 @@ Claims we can test the thing. Lets give it a whirl.
 Wow! Worked fine. Best commit that. 20150913 2205CST
 
 
+###Making a Connection
+20150913 2208CST
 
+Add a notification to `MCManager.m`, specifically the session `peerID didChangeState` method. Added an NSDictionary with `peerID` and `state` parameter values as its contents. Post a notification with `MCDidChangeStateNotification` name and the dict object as its user info dictionary.
+
+Need to make `ConnectionsViewController.m` observe for the notification and post it. Add it in `viewDidLoad`, and get ready for errors because we included an undeclared method. 
+
+`peerDidChangeStateWithNotification` goes up in the interface.
+
+Now we need to implement that- the purpose is to make a list of people we've connected to so we can use the disconnect button and disable the text field. We need an array to be used as the datasource for our tableview, so we declare and initialize that.
+
+For the table view to respond to our items the class has to be set as its delegate. While in viewDidLoad we add a couple lines for that. Errors, 'cause we have to adopt the protocols.
+
+Add `UITableViewDelegate` and `UITableViewDataSource` to the `ConnectionsViewController.h` file.
+
+We return to the `.m` to implement our private method for handling the notifications.
+
+`peerDidChangeStateWithNotification` has a few steps. 
+First it gets the two objects from the user info dictionary and keep the display name of the connected peer in an NSString.
+Then it only performs actions if the state is not `MCSessionStateConnecting`, and then we find the index of the current peer in the array and remove it.
+Then we reload the data on the table view, check if there are any peers left, and depending on the bool we set the text field and the disconnect button enable state.
+
+We need required table view delegate and datasource methods.
+Whole bunch of stuff, under the pragma mark for the table view delegate and data source methods.
 

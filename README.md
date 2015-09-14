@@ -103,3 +103,8 @@ Then we reload the data on the table view, check if there are any peers left, an
 We need required table view delegate and datasource methods.
 Whole bunch of stuff, under the pragma mark for the table view delegate and data source methods.
 
+20150913 2230CST
+Had a brief bug from misplaced code in peerDidChangeState. Resolved it.
+
+20150913 2230CST
+add `disconnect` method.

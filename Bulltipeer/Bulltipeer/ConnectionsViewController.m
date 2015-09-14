@@ -62,12 +62,13 @@
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
             
-            [_tblConnectedDevices reloadData];
-            
-            BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
-            [_btnDisconnect setEnabled:!peersExist];
-            [_txtName setEnabled:peersExist];
+
         }
+        [_tblConnectedDevices reloadData];
+        
+        BOOL peersExist = ([[_appDelegate.mcManager.session connectedPeers] count] == 0);
+        [_btnDisconnect setEnabled:!peersExist];
+        [_txtName setEnabled:peersExist];
     }
 }
 
@@ -142,6 +143,15 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 60.0;
+}
+
+- (IBAction)disconnect:(id)sender {
+    [_appDelegate.mcManager.session disconnect];
+    
+    _txtName.enabled = YES;
+    
+    [_arrConnectedDevices removeAllObjects];
+    [_tblConnectedDevices reloadData];
 }
 
 /*

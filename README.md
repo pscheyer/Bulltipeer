@@ -108,3 +108,14 @@ Had a brief bug from misplaced code in peerDidChangeState. Resolved it.
 
 20150913 2230CST
 add `disconnect` method. Doesn't quite work properly across both devices… takes a little bit, i guess. A feature. 
+
+###Setup the Chat Interface
+20150914 1926CST
+Going to do most of this in the interface builder
+
+20150914 2052CST
+Spent more than an hour stuck. Eventually found that i have to add a view to a view controller before I can add anything else, or it just fills the entire view controller.
+
+Had to stretch the view measurements a bit to fit the wireframe.
+
+Added properties and IBActions for the buttons to `ChatBoxViewController.h`.

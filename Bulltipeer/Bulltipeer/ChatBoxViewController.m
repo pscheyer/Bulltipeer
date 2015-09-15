@@ -7,9 +7,10 @@
 //
 
 #import "ChatBoxViewController.h"
+#import "AppDelegate.h"
 
 @interface ChatBoxViewController ()
-
+@property (nonatomic, strong) AppDelegate *appDelegate;
 @end
 
 @implementation ChatBoxViewController
@@ -26,7 +27,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view, typically from a nib.
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
 }
 
 - (void)didReceiveMemoryWarning {

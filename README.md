@@ -119,3 +119,8 @@ Spent more than an hour stuck. Eventually found that i have to add a view to a v
 Had to stretch the view measurements a bit to fit the wireframe.
 
 Added properties and IBActions for the buttons to `ChatBoxViewController.h`.
+
+###Let's Chat
+In `ChatBoxViewController.m` add import for `AppDelegate.h`, a property for the app delegate, and an instantiation for it in viewDidLoad.
+
+

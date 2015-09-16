@@ -23,7 +23,7 @@
     
     _mcManager = [[MCManager alloc] init];
     
-//    ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
+//   ChatBoxViewController *chatBoxViewController = [[ChatBoxViewController alloc] init];
 //    FileSharingViewController *fileSharingViewController = [[FileSharingViewController alloc] init];
 //    ConnectionsViewController *connectionsViewController = [[ConnectionsViewController alloc] init];
 //    UITabBarController *tabBarVC = [[UITabBarController alloc] init];

@@ -10,7 +10,11 @@
 #import "AppDelegate.h"
 
 @interface ChatBoxViewController ()
+
 @property (nonatomic, strong) AppDelegate *appDelegate;
+
+- (void)sendMyMessage;
+
 @end
 
 @implementation ChatBoxViewController
@@ -26,10 +30,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor grayColor];
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    _txtMessage.delegate = self;
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self sendMyMessage];
+    return YES;
+}
+
+- (IBAction)sendMessage:(id)sender {
+    [self sendMyMessage];
+}
+
+- (IBAction)cancelMessage:(id)sender {
+    [_txtMessage resignFirstResponder];
+}
+
+- (void)sendMyMessage{
+    NSData *dataToSend = [_txtMessage.text dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *allPeers = _appDelegate.mcManager.session.connectedPeers;
+    NSError *error;
+    
+    [_appDelegate.mcManager.session sendData:dataToSend toPeers:allPeers withMode:MCSessionSendDataReliable error:&error];
+    
+    if(error){
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    
+    [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];
+    [_txtMessage setText:@" "];
+    [_txtMessage resignFirstResponder];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

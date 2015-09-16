@@ -13,69 +13,70 @@
                         <viewControllerLayoutGuide type="bottom" id="XyI-z1-vhd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DyT-fn-4wC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Message" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-jE-Xy1">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Message" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-jE-Xy1">
+                                <rect key="frame" x="20" y="20" width="339" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="20" width="339" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9f-og-YyH">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Send">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="313" y="58" width="46" height="30"/>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-rk-3Mc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-rk-3Mc">
+                                <rect key="frame" x="25" y="58" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="25" y="58" width="48" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="cancelMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0g-eI-9wP"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3O5-Ng-ylW">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3O5-Ng-ylW">
+                                <rect key="frame" x="0.0" y="96" width="375" height="422"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="96" width="375" height="522"/>
+                                    <rect key="frame" x="0.0" y="91" width="375" height="527"/>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9f-og-YyH">
+                                <rect key="frame" x="313" y="58" width="46" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="313" y="58" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UVe-zk-YyJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="uIa-jE-Xy1"/>
-                                <exclude reference="r9f-og-YyH"/>
-                                <exclude reference="vaZ-rk-3Mc"/>
-                                <exclude reference="3O5-Ng-ylW"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="uIa-jE-Xy1"/>
-                                <include reference="r9f-og-YyH"/>
-                                <include reference="vaZ-rk-3Mc"/>
-                                <include reference="3O5-Ng-ylW"/>
+                                <exclude reference="vaZ-rk-3Mc"/>
+                                <exclude reference="3O5-Ng-ylW"/>
+                                <exclude reference="r9f-og-YyH"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chat Box" id="DSV-sN-3yC"/>
+                    <connections>
+                        <outlet property="tvChat" destination="3O5-Ng-ylW" id="ljm-Iv-hFY"/>
+                        <outlet property="txtMessage" destination="uIa-jE-Xy1" id="8n0-22-GkH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137.75" y="87.75"/>
+            <point key="canvasLocation" x="1146.5" y="-55.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lzo-vV-pXq">
@@ -89,7 +90,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="LNt-ZP-aUs"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="cne-ct-ZBv"/>
                         <segue destination="Oak-ZZ-Rru" kind="relationship" relationship="viewControllers" id="5Lk-Mb-vsM"/>
                         <segue destination="61a-20-qmX" kind="relationship" relationship="viewControllers" id="iPb-A1-hyi"/>
                     </connections>
@@ -107,7 +108,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jBg-bo-uas"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="X4N-IP-27x">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="The device name displayed to others..." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ytt-hk-Epq">
@@ -188,7 +189,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lwq-Kl-36h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VLd-r5-osa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

@@ -123,4 +123,6 @@ Added properties and IBActions for the buttons to `ChatBoxViewController.h`.
 ###Let's Chat
 In `ChatBoxViewController.m` add import for `AppDelegate.h`, a property for the app delegate, and an instantiation for it in viewDidLoad.
 
+20150915 2118CST
+ugh just spent an hour troubleshooting an issue. Made my views in compact and couldn't see them in wAny / hAny. Worth uploading just for that.
 

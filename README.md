@@ -132,3 +132,6 @@ add code to `didReceiveData` method in `MCManager.m`
 20150917 2147CST
 Token Update for the day. I love jennifers
 
+20150918 2135CST
+Token update 2
+

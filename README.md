@@ -130,7 +130,7 @@ ugh just spent an hour troubleshooting an issue. Made my views in compact and co
 add code to `didReceiveData` method in `MCManager.m`
 
 20150917 2147CST
-Token Update for the day. I love jennifers
+Token Update for the day.
 
 20150918 2135CST
 Token update 2
@@ -144,4 +144,16 @@ Text is set to text view via performSelectorOnMainThread:withObject:waitUntilDon
 
 20150919 2020CST
 chat client sends messages but formatting and content are broken. Will fix later.
+
+20150920 1020CST
+Troubleshooting chat client message issues. I think the notification might not be sending properly. Might've missed a chunk to include there.
+Checked out the `sendMyMessage` method in `ChatBoxViewController.m` which includes the text formatting for the chat box. it seems to be in order- outputs `@"I wrote:\n%@\n\n", _txtMessage.text`. Could be that `_txtMessage.text` isn't formatted quite correctly. 
+I had added a space in the next line. Fixed that, lets see how it goes.
+
+Okay- on the sender it is saying the message and then I wrote and then your message… Oh, there is a text box at the top. If you click in the table view it also brings up the typing window and hitting send doesn't send anything and shows you a weird thing.
+
+Note: Add blue box around text box for ux, turn off text from clicking on chat box.
+Note: on the ipod touch there is no send button- the screen continues to the right off the panel.
+
+But! There is no bug to fix, only features to add, so we will call it good because it is functional and move on.
 

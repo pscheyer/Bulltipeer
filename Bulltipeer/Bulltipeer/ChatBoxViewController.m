@@ -15,6 +15,8 @@
 
 - (void)sendMyMessage;
 
+-(void)didReceiveDataWithNotification:(NSNotification *)notification;
+
 @end
 
 @implementation ChatBoxViewController
@@ -34,6 +36,11 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     _txtMessage.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveDataWithNotification:)
+                                                 name:@"MCDidReceiveDataNotification"
+                                               object:nil];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -65,7 +72,15 @@
     [_txtMessage resignFirstResponder];
 }
 
-
+-(void)didReceiveDataWithNotification:(NSNotification *)notification{
+    MCPeerID *peerID = [[notification userInfo] objectForKey:@"peerID"];
+    NSString *peerDisplayName = peerID.displayName;
+    
+    NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
+    NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    
+    [_tvChat performSelectorOnMainThread:@selector(setText:) withObject:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"%@ wrote:\n%@\n\n", peerDisplayName, receivedText]] waitUntilDone:NO];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

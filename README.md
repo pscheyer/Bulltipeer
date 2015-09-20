@@ -135,3 +135,10 @@ Token Update for the day. I love jennifers
 20150918 2135CST
 Token update 2
 
+20150919 1940CST
+add observation for notification to `ChatBoxViewController.m`. 
+Declare `didReceiveDataWithNotification` in private section of interface for `ChatBoxViewController.m`.
+`didReceiveDataWithNotification` made to read the user info dictionary of the notification, which contains the peer that sent the message and the message itself as an NSData object. From that object we'll get the display name and convert the data into an NSString object. Then, it adds to the text view the peer display name along with its message.
+
+
+

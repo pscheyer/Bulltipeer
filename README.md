@@ -140,5 +140,8 @@ add observation for notification to `ChatBoxViewController.m`.
 Declare `didReceiveDataWithNotification` in private section of interface for `ChatBoxViewController.m`.
 `didReceiveDataWithNotification` made to read the user info dictionary of the notification, which contains the peer that sent the message and the message itself as an NSData object. From that object we'll get the display name and convert the data into an NSString object. Then, it adds to the text view the peer display name along with its message.
 
+Text is set to text view via performSelectorOnMainThread:withObject:waitUntilDone: method. The data was received in a secondary thread and visual updates should take place on the main thread.
 
+20150919 2020CST
+chat client sends messages but formatting and content are broken. Will fix later.
 

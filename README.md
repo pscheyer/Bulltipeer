@@ -157,3 +157,6 @@ Note: on the ipod touch there is no send button- the screen continues to the rig
 
 But! There is no bug to fix, only features to add, so we will call it good because it is functional and move on.
 
+20150922 1734CST
+token update
+

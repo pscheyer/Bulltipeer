@@ -196,6 +196,8 @@ return `allFiles`.
 
 Populate `arrFiles` mutable array by calling `getAllDocDirFiles` from `viewDidLoad`.
 
+Set delegate and data source for `_tblFiles` to `self`.
+
 
 
 

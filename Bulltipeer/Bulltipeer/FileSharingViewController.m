@@ -39,6 +39,9 @@
     [self copySampleFilesToDocDirIfNeeded];
     
     _arrFiles = [[NSMutableArray alloc] initWithArray:[self getAllDocDirFiles]];
+    
+    [_tblFiles setDelegate:self];
+    [_tblFiles setDataSource:self];
 //    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }

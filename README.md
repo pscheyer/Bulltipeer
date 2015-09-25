@@ -188,5 +188,12 @@ Adding table view functionality. Needs array as datasource. Array must contain a
 
 Declare in `FileSharingViewController.m` private section `getAllDocDirFiles` and `NSMutableArray arrFiles`.
 
+in `getAllDocDirFiles` implementation declare `fileManager`, `error`, and `NSArray allFiles`. `allFiles` populated with `fileManager` `contentsOfDirectoryAtPath:_documentsDirectory`. 
+
+Add error handling.
+
+return `allFiles`.
+
+
 
 

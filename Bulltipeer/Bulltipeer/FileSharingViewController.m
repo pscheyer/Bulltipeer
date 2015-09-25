@@ -14,11 +14,11 @@
 
 @property (nonatomic, strong) NSString *documentsDirectory;
 
+-(void)copySampleFilesToDocDirIfNeeded;
+
 @property (nonatomic, strong) NSMutableArray *arrFiles;
 
 -(NSArray *)getAllDocDirFiles;
-
--(void)copySampleFilesToDocDirIfNeeded;
 
 @end
 
@@ -66,7 +66,12 @@
     NSError *error;
     NSArray *allFiles = [fileManager contentsOfDirectoryAtPath:_documentsDirectory error:&error];
     
+    if (error) {
+        NSLog(@"%@", [error localizedDescription]);
+        return nil;
+    }
     
+    return allFiles;
 }
 
 - (void)didReceiveMemoryWarning {

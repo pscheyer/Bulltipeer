@@ -198,6 +198,8 @@ Populate `arrFiles` mutable array by calling `getAllDocDirFiles` from `viewDidLo
 
 Set delegate and data source for `_tblFiles` to `self`.
 
+Then, have `_tblFiles` reload data, still in `viewDidLoad`, to make sample files appear on the table view upon view controller loading.
+
 
 
 

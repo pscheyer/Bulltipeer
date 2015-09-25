@@ -42,6 +42,8 @@
     
     [_tblFiles setDelegate:self];
     [_tblFiles setDataSource:self];
+    
+    [_tblFiles reloadData];
 //    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }

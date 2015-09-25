@@ -184,5 +184,9 @@ Then return error if there is one.
 
 Call this function in `viewDidLoad`. 
 
+Adding table view functionality. Needs array as datasource. Array must contain all files existing on the documents directory.
+
+Declare in `FileSharingViewController.m` private section `getAllDocDirFiles` and `NSMutableArray arrFiles`.
+
 
 

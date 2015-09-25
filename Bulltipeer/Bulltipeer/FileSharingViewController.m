@@ -14,6 +14,10 @@
 
 @property (nonatomic, strong) NSString *documentsDirectory;
 
+@property (nonatomic, strong) NSMutableArray *arrFiles;
+
+-(NSArray *)getAllDocDirFiles;
+
 -(void)copySampleFilesToDocDirIfNeeded;
 
 @end
@@ -55,6 +59,14 @@
             return;
         }
     }
+}
+
+-(NSArray *)getAllDocDirFiles{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *allFiles = [fileManager contentsOfDirectoryAtPath:_documentsDirectory error:&error];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

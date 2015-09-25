@@ -218,6 +218,8 @@ in method for actionsheet appearance (`tableView: […] didSelectRowAtIndexPath`
 
 then, we use a `for` loop to add each single peer one by one as a button to the action sheet. 
 
+Set the cancel button, then display the actionsheet.
+
 
 
 

@@ -93,6 +93,10 @@
         [confirmSending addButtonWithTitle:[[[_appDelegate.mcManager.session connectedPeers] objectAtIndex:i] displayName]];
     }
     
+    [confirmSending setCancelButtonIndex:[confirmSending addButtonWithTitle:@"Cancel"]];
+    
+    [confirmSending showInView:self.view];
+    
     
 }
 

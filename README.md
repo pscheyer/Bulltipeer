@@ -166,7 +166,9 @@ Next up is the File Exchanger
 following instructions on adding ui elements. Note- when selecting prototype cells, you have to select them and then change the type to static cell before you can modify the identifier.
 
 add ui elements
+adopt protocols for delegates in `FileSharingViewController.h` and link `tblView` table view controller to main.storyboard.
 
+###Sharing Files
 
 
 

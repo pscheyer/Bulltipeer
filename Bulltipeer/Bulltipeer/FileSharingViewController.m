@@ -7,8 +7,10 @@
 //
 
 #import "FileSharingViewController.h"
+#import "AppDelegate.h"
 
 @interface FileSharingViewController ()
+@property (nonatomic, strong) AppDelegate *appDelegate;
 
 @end
 
@@ -24,8 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    self.view.backgroundColor = [UIColor redColor];
+//    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

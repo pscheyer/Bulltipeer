@@ -174,5 +174,7 @@ Declare and instantiate `AppDelegate *appDelegate` in `FileSharingViewController
 20150924 2143CST
 create a private method to take the sample files from the application bundle and copy them to the documents directory. Declare the method and an NSString object to keep the documents directory path.
 
+In `copySampleFilesToDocDirIfNeeded`, instantiate an `NSArray` named `paths` as an `NSSearchPathForDirectoriesInDomains` using the arguments `NSDocumentDirectory, NSUserDomainMask, YES`.
+
 
 

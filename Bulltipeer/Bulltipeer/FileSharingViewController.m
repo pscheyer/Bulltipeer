@@ -36,6 +36,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)copySampleFilesToDocDirIfNeeded{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

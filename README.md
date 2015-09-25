@@ -200,6 +200,12 @@ Set delegate and data source for `_tblFiles` to `self`.
 
 Then, have `_tblFiles` reload data, still in `viewDidLoad`, to make sample files appear on the table view upon view controller loading.
 
+Need to implement the table view delegate and data source required methods.
+
+in required `cellForRowAtIndexPath` method, do some formatting and font selection, identifiers, set the text, and set fonts and size.
+
+set `heightForRowAtIndexPath` to `60.0`.
+
 
 
 

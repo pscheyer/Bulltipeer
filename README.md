@@ -229,6 +229,11 @@ Well! That's a rabbit hole. For now I'll keep the action sheet. Looks like the a
 20150924 2315CST
 Need to get another device to test if the UIActionSheet isn't working, or just aren't connected to anyone.
 
+20150925 942CST
+Works fine. Just had to be connected first. Might want to add a button saying 'connect to others?'
+
+
+
 
 
 

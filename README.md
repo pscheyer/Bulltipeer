@@ -216,6 +216,8 @@ Adding functionality to enable the app to send a file once it gets selected. Whe
 
 in method for actionsheet appearance (`tableView: […] didSelectRowAtIndexPath`, we start with an NSString `selectedFile`, populated with the object from the `indexPath.row` for the selected row. Then we build the UIActionSheet `confirmSending` by allocating an actionsheet, initializing it with the title of the selected file, setting its delegate to `self`, and setting the other buttons to `nil`.
 
+then, we use a `for` loop to add each single peer one by one as a button to the action sheet. 
+
 
 
 

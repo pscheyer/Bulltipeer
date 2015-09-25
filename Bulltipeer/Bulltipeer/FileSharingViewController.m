@@ -88,6 +88,12 @@
                                                        cancelButtonTitle:nil
                                                   destructiveButtonTitle:nil
                                                        otherButtonTitles:nil];
+    
+    for (int i=0; i < [[_appDelegate.mcManager.session connectedPeers] count]; i++) {
+        [confirmSending addButtonWithTitle:[[[_appDelegate.mcManager.session connectedPeers] objectAtIndex:i] displayName]];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -162,5 +162,11 @@ token update
 
 20150923 1922CST
 Next up is the File Exchanger
+20150924 2128CST
+following instructions on adding ui elements. Note- when selecting prototype cells, you have to select them and then change the type to static cell before you can modify the identifier.
+
+add ui elements
+
+
 
 

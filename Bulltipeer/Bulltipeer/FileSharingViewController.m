@@ -42,6 +42,13 @@
     
     NSString *file1Path = [_documentsDirectory stringByAppendingPathComponent:@"sample_file1.txt"];
     NSString *file2Path = [_documentsDirectory stringByAppendingPathComponent:@"sample_file2.txt"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    
+    if(![fileManager fileExistsAtPath:file1Path] || ![fileManager fileExistsAtPath:file2Path]) {
+        [fileManager copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"sample_file1" ofType:@"txt"] toPath:file1Path error:&error];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

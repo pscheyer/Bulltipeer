@@ -179,7 +179,7 @@ Then set `_documentsDirectory` as an NSString with the value from `paths` at 0.
 
 This specifies and keeps the documents directory path to the `documentsDirectory` object.
 
-Instantiate and specify the path for the sample files and check if they exist in documents directory. 
+Instantiate and specify the path for the sample files and check if they exist in documents directory. If they are not found, copy them from main bundle to documents directory, and log descriptions of files. 
 
 
 

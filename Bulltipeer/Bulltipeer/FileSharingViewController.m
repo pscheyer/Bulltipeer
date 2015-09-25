@@ -81,6 +81,15 @@
     return allFiles;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    NSString *selectedFile = [_arrFiles objectAtIndex:indexPath.row];
+    UIActionSheet *confirmSending = [[UIActionSheet alloc] initWithTitle:selectedFile
+                                                                delegate:self
+                                                       cancelButtonTitle:nil
+                                                  destructiveButtonTitle:nil
+                                                       otherButtonTitles:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

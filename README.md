@@ -211,6 +211,11 @@ ran it to test. Got a bug when i try to open the `FileSharingViewController` vie
 
 Dragged files into XCode and added them there. No error, file shows properly.
 
+20150924 2223CST
+Adding functionality to enable the app to send a file once it gets selected. When tapping on a table view row, a list of all peers will appear to allow selection of peer to send file. Using a `UIActionSheet` object, where each button will represent a peer. Action sheet should appear every time we tap on a row.
+
+in method for actionsheet appearance (`tableView: […] didSelectRowAtIndexPath`, we start with an NSString `selectedFile`, populated with the object from the `indexPath.row` for the selected row. Then we build the UIActionSheet `confirmSending` by allocating an actionsheet, initializing it with the title of the selected file, setting its delegate to `self`, and setting the other buttons to `nil`.
+
 
 
 

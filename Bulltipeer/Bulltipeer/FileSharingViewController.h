@@ -10,4 +10,6 @@
 
 @interface FileSharingViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tblFiles;
+
 @end

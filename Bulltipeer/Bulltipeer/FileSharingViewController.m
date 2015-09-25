@@ -38,6 +38,7 @@
 
 -(void)copySampleFilesToDocDirIfNeeded{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _documentsDirectory = [[NSString alloc] initWithString:[paths objectAtIndex:0]];
 }
 
 - (void)didReceiveMemoryWarning {

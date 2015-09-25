@@ -48,6 +48,11 @@
     
     if(![fileManager fileExistsAtPath:file1Path] || ![fileManager fileExistsAtPath:file2Path]) {
         [fileManager copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"sample_file1" ofType:@"txt"] toPath:file1Path error:&error];
+        
+        if (error) {
+            NSLog(@"%@", [error localizedDescription]);
+            return;
+        }
     }
 }
 

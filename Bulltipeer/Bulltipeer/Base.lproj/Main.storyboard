@@ -236,6 +236,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="File Sharing" id="g72-cC-Xem"/>
+                    <connections>
+                        <outlet property="tblFiles" destination="xxP-Fe-1Da" id="UHD-zS-Y5T"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1146.5" y="1014.5"/>

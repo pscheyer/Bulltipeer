@@ -226,6 +226,9 @@ Keep the selected file name and selected row in two private members, `_selectedF
 
 Well! That's a rabbit hole. For now I'll keep the action sheet. Looks like the alert views have a completely different method of adding buttons. I found a pretty [good article](http://useyourloaf.com/blog/uialertcontroller-changes-in-ios-8.html) on it, but it's complex and worth a look on its own. 
 
+20150924 2315CST
+Need to get another device to test if the UIActionSheet isn't working, or just aren't connected to anyone.
+
 
 
 

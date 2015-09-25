@@ -171,5 +171,8 @@ adopt protocols for delegates in `FileSharingViewController.h` and link `tblView
 ###Sharing Files
 Declare and instantiate `AppDelegate *appDelegate` in `FileSharingViewController.m'. Declare it in private section within the interface, instantiate it in `viewDidLoad`.
 
+20150924 2143CST
+create a private method to take the sample files from the application bundle and copy them to the documents directory. Declare the method and an NSString object to keep the documents directory path.
+
 
 

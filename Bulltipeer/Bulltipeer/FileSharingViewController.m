@@ -12,6 +12,10 @@
 @interface FileSharingViewController ()
 @property (nonatomic, strong) AppDelegate *appDelegate;
 
+@property (nonatomic, strong) NSString *documentsDirectory;
+
+-(void)copySampleFilesToDocDirIfNeeded;
+
 @end
 
 @implementation FileSharingViewController

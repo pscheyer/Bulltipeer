@@ -169,6 +169,7 @@ add ui elements
 adopt protocols for delegates in `FileSharingViewController.h` and link `tblView` table view controller to main.storyboard.
 
 ###Sharing Files
+Declare and instantiate `AppDelegate *appDelegate` in `FileSharingViewController.m'. Declare it in private section within the interface, instantiate it in `viewDidLoad`.
 
 
 

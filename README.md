@@ -177,7 +177,9 @@ create a private method to take the sample files from the application bundle and
 In `copySampleFilesToDocDirIfNeeded`, instantiate an `NSArray` named `paths` as an `NSSearchPathForDirectoriesInDomains` using the arguments `NSDocumentDirectory, NSUserDomainMask, YES`. 
 Then set `_documentsDirectory` as an NSString with the value from `paths` at 0.
 
-This specifies and keeps the documents directory path to the `documentsDirectory` object. 
+This specifies and keeps the documents directory path to the `documentsDirectory` object.
+
+Instantiate and specify the path for the sample files and check if they exist in documents directory. 
 
 
 

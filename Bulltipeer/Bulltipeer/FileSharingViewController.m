@@ -39,6 +39,9 @@
 -(void)copySampleFilesToDocDirIfNeeded{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _documentsDirectory = [[NSString alloc] initWithString:[paths objectAtIndex:0]];
+    
+    NSString *file1Path = [_documentsDirectory stringByAppendingPathComponent:@"sample_file1.txt"];
+    NSString *file2Path = [_documentsDirectory stringByAppendingPathComponent:@"sample_file2.txt"];
 }
 
 - (void)didReceiveMemoryWarning {

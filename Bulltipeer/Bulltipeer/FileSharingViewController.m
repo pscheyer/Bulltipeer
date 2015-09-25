@@ -37,6 +37,8 @@
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [self copySampleFilesToDocDirIfNeeded];
+    
+    _arrFiles = [[NSMutableArray alloc] initWithArray:[self getAllDocDirFiles]];
 //    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }

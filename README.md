@@ -194,6 +194,8 @@ Add error handling.
 
 return `allFiles`.
 
+Populate `arrFiles` mutable array by calling `getAllDocDirFiles` from `viewDidLoad`.
+
 
 
 

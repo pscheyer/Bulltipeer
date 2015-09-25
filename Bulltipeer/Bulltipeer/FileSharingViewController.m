@@ -20,6 +20,9 @@
 
 -(NSArray *)getAllDocDirFiles;
 
+@property (nonatomic,strong) NSString *selectedFile;
+@property (nonatomic) NSInteger selectedRow;
+
 @end
 
 @implementation FileSharingViewController
@@ -96,6 +99,9 @@
     [confirmSending setCancelButtonIndex:[confirmSending addButtonWithTitle:@"Cancel"]];
     
     [confirmSending showInView:self.view];
+    
+    _selectedFile = [_arrFiles objectAtIndex:indexPath.row];
+    _selectedRow = indexPath.row;
     
     
 }

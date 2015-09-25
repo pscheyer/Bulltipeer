@@ -220,6 +220,8 @@ then, we use a `for` loop to add each single peer one by one as a button to the 
 
 Set the cancel button, then display the actionsheet.
 
+Keep the selected file name and selected row in two private members, `_selectedFile` and `_selectedRow`. Declare these members up in the interface. 
+
 
 
 

@@ -206,6 +206,11 @@ in required `cellForRowAtIndexPath` method, do some formatting and font selectio
 
 set `heightForRowAtIndexPath` to `60.0`.
 
+20150924 2219CST
+ran it to test. Got a bug when i try to open the `FileSharingViewController` view, related to the `NSFileManager copyItemAtPath:toPath:error` where the source path is nil.
+
+Dragged files into XCode and added them there. No error, file shows properly.
+
 
 
 

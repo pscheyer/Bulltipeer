@@ -17,6 +17,8 @@
 		D3A57CDD1B9E54A300644052 /* FileSharingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CDC1B9E54A300644052 /* FileSharingViewController.m */; };
 		D3A57CE01B9E54B100644052 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CDF1B9E54B100644052 /* ConnectionsViewController.m */; };
 		D3A57CE31B9E626100644052 /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A57CE21B9E626100644052 /* MCManager.m */; };
+		D3AE4A921BB4F56C002F1F8D /* sample_file1.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE4A901BB4F56C002F1F8D /* sample_file1.txt */; settings = {ASSET_TAGS = (); }; };
+		D3AE4A931BB4F56C002F1F8D /* sample_file2.txt in Resources */ = {isa = PBXBuildFile; fileRef = D3AE4A911BB4F56C002F1F8D /* sample_file2.txt */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D3A57CDF1B9E54B100644052 /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
 		D3A57CE11B9E626100644052 /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
 		D3A57CE21B9E626100644052 /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		D3AE4A901BB4F56C002F1F8D /* sample_file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_file1.txt; sourceTree = "<group>"; };
+		D3AE4A911BB4F56C002F1F8D /* sample_file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample_file2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				D3A57CBF1B9E53DD00644052 /* Main.storyboard */,
 				D3A57CC21B9E53DD00644052 /* Images.xcassets */,
 				D3A57CC41B9E53DD00644052 /* LaunchScreen.xib */,
+				D3AE4A901BB4F56C002F1F8D /* sample_file1.txt */,
+				D3AE4A911BB4F56C002F1F8D /* sample_file2.txt */,
 				D3A57CB51B9E53DD00644052 /* Supporting Files */,
 			);
 			path = Bulltipeer;
@@ -214,6 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AE4A931BB4F56C002F1F8D /* sample_file2.txt in Resources */,
+				D3AE4A921BB4F56C002F1F8D /* sample_file1.txt in Resources */,
 				D3A57CC11B9E53DD00644052 /* Main.storyboard in Resources */,
 				D3A57CC61B9E53DD00644052 /* LaunchScreen.xib in Resources */,
 				D3A57CC31B9E53DD00644052 /* Images.xcassets in Resources */,

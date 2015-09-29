@@ -232,6 +232,10 @@ Need to get another device to test if the UIActionSheet isn't working, or just a
 20150925 942CST
 Works fine. Just had to be connected first. Might want to add a button saying 'connect to others?'
 
+20150928 2227CST
+token update
+
+
 
 
 

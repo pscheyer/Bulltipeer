@@ -235,6 +235,23 @@ Works fine. Just had to be connected first. Might want to add a button saying 'c
 20150928 2227CST
 token update
 
+20150930 1705CST
+Missed a day for token updates. Oh well!
+
+We are currently implementing behavior for after the user has selected a peer on the action sheet. 
+
+We are implementing the `actionSheet:clickedButtonAtIndex:` delegate method which is a member of the UIActionSheetDelegate protocol, and then invoking a method of the multipeer connectivity framework named `sendResourceAtURL:withName:toPeer:withCompletionHandler:`. 
+This is a method of the MCSession class. We also include a completion handler to check if any error has occurred during the sending process or if the file has been sent successfully. 
+
+
+***Note*** The method to import our sample files does not work properly, only adds sample file 1 and not sample file 2. Need to fix later.
+
+Our method will return an NSProgress object to show a percentage fvalue of the completion of the whole process. BIG CONCERN WITH NSPROGRESS- the interface will freeze if we call this method on the main thread. So we will `dispatch_async` away from the main thread to allow our interface to remain responsive while sending files.
+
+20150930 1720CST
+Hm. Copied and pasted the code for that button click. Not into the Multipeer thing right now. Will come back later. Going to screw with Python city generator. 
+
+
 
 
 

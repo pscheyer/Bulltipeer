@@ -47,7 +47,7 @@
     [_tblFiles setDataSource:self];
     
     [_tblFiles reloadData];
-//    self.view.backgroundColor = [UIColor redColor];
+    //    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -106,6 +106,40 @@
     
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != [[_appDelegate.mcManager.session connectedPeers] count]) {
+        NSString *filePath = [_documentsDirectory stringByAppendingPathComponent:_selectedFile];
+        NSString *modifiedName = [NSString stringWithFormat:@"%@_%@", _appDelegate.mcManager.peerID.displayName, _selectedFile];
+        NSURL *resourceURL = [NSURL fileURLWithPath:filePath];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSProgress *progress = [_appDelegate.mcManager.session sendResourceAtURL:resourceURL
+                                                                            withName:modifiedName
+                                                                              toPeer:[[_appDelegate.mcManager.session connectedPeers] objectAtIndex:buttonIndex]
+                                                               withCompletionHandler:^(NSError *error) {
+                                                                   if (error) {
+                                                                       NSLog(@"Error: %@", [error localizedDescription]);
+                                                                   }
+                                                                   
+                                                                   else{
+                                                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MCDemo"
+                                                                                                                       message:@"File was successfully sent."
+                                                                                                                      delegate:self
+                                                                                                             cancelButtonTitle:nil
+                                                                                                             otherButtonTitles:@"Great!", nil];
+                                                                       
+                                                                       [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+                                                                       
+                                                                       [_arrFiles replaceObjectAtIndex:_selectedRow withObject:_selectedFile];
+                                                                       [_tblFiles performSelectorOnMainThread:@selector(reloadData)
+                                                                                                   withObject:nil
+                                                                                                waitUntilDone:NO];
+                                                                   }
+                                                               }];
+        });
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -142,13 +176,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

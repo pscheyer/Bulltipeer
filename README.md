@@ -252,6 +252,56 @@ Our method will return an NSProgress object to show a percentage fvalue of the c
 Hm. Copied and pasted the code for that button click. Not into the Multipeer thing right now. Will come back later. Going to screw with Python city generator. 
 
 
+20151003 1203CST
+So! We are dealing with a bit of code so we'll do it piece by piece.
+
+```objective-c
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex != [[_appDelegate.mcManager.session connectedPeers] count]) {
+        NSString *filePath = [_documentsDirectory stringByAppendingPathComponent:_selectedFile];
+        NSString *modifiedName = [NSString stringWithFormat:@"%@_%@", _appDelegate.mcManager.peerID.displayName, _selectedFile];
+        NSURL *resourceURL = [NSURL fileURLWithPath:filePath];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSProgress *progress = [_appDelegate.mcManager.session sendResourceAtURL:resourceURL
+                                                                            withName:modifiedName
+                                                                              toPeer:[[_appDelegate.mcManager.session connectedPeers] objectAtIndex:buttonIndex]
+                                                               withCompletionHandler:^(NSError *error) {
+                                                                   if (error) {
+                                                                       NSLog(@"Error: %@", [error localizedDescription]);
+                                                                   }
+                                                                   
+                                                                   else{
+                                                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"MCDemo"
+                                                                                                                       message:@"File was successfully sent."
+                                                                                                                      delegate:self
+                                                                                                             cancelButtonTitle:nil
+                                                                                                             otherButtonTitles:@"Great!", nil];
+                                                                       
+                                                                       [alert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+                                                                       
+                                                                       [_arrFiles replaceObjectAtIndex:_selectedRow withObject:_selectedFile];
+                                                                       [_tblFiles performSelectorOnMainThread:@selector(reloadData)
+                                                                                                   withObject:nil
+                                                                                                waitUntilDone:NO];
+                                                                   }
+                                                               }];
+                    });
+    }
+}
+```
+
+We start with if the buttonIndex doesn't equal the count of peers connected to,
+then we create a new string `filePath` and set it to pull the path component as a string from `_selectedFile` in `_documentsDirectory`.
+Then we create another nsstring named `modifiedName` and set it to a stringWithFormat pulled from the user's `displayName` and `_selectedFile`.
+Moving along we make an NSUrl `resourceURL` and set it to the fileURLWithPath.
+
+Then we start in on our dispatch_async secondary thread for the progress bar.
+For that, we begin with instantiating the NSProgress item. 
+The progress bar is tied to the file being sent- it involves the actual sending process and tracks its completion.
+If it finishes we go to the alertView to pop up a completion message.
+ 
+
 
 
 
